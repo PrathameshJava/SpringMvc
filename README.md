@@ -20,10 +20,10 @@ mvn clean-install
 ```
 ## Usage:
 ```
-* To use this project, follow these steps:
-* Navigate to the project's root directory in a terminal window.
-* Run the command npm start to start the project.
-* Open a web browser and go to http://localhost:8080/springmvc to view the project.
+ To use this project, follow these steps:
+ Navigate to the project's root directory in a terminal window.
+ Run the command npm start to start the project.
+ Open a web browser and go to http://localhost:8080/springmvc to view the project.
 ```
 ## Contributing:
 ```
