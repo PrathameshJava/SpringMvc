@@ -13,7 +13,7 @@ An IDE such as Eclipse or IntelliJ IDEA
 ```
 Getting Started
 Clone the repository:
-https://
+https://github.com/PrathameshJava/SpringMvc.git
 Open the project in your IDE of choice.
 Build the project using Maven:
 mvn clean-install
