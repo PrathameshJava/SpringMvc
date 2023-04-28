@@ -56,7 +56,7 @@ public class ProductControler {
 	public String listProduct(Model model, @RequestParam(defaultValue = "0") int page) {
 
 		List<Product> products = productServices.getAll();
-		Page<Product> productPage = productDao.findAll(PageRequest.of(page, 10));
+		Page<Product> productPage = productDao.findAll(PageRequest.of(page, 5));
 		model.addAttribute("products", productPage.getContent());
 		model.addAttribute("currentPage", page);
 		model.addAttribute("totalPages", productPage.getTotalPages());
