@@ -31,20 +31,7 @@ public class ProductControler {
 		}
 		productServices.addProduct(product);
 		return "saveproduct";
-		/*
-		 * if (file.isEmpty()) { return "redirect:/uploadFailure"; }
-		 * 
-		 * // Save the file to disk String fileName = file.getOriginalFilename(); File
-		 * uploadedFile = new File("path/to/uploaded/files/" + fileName); try {
-		 * file.transferTo(uploadedFile); } catch (IOException e) { return
-		 * "redirect:/uploadFailure"; }
-		 * 
-		 * // Create and save the entity Entity entity = new Entity();
-		 * entity.setName(name); entity.setFilePath(uploadedFile.getAbsolutePath());
-		 * entityService.save(entity);
-		 * 
-		 * return "redirect:/uploadSuccess"; }
-		 */
+		
 	}
 
 	@RequestMapping(path = "/product", method = RequestMethod.POST)
