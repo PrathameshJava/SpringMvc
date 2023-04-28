@@ -42,9 +42,9 @@
       </li>
     
     </ul>
-    <form class="form-inline my-2 my-lg-0" action="search/" method="GET">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="name">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  <form class="form-inline my-2 my-lg-0" action="search">
+        <input class="form-control mr-sm-2" type="text" name="name" placeholder="Search by name" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
 </nav>
@@ -81,15 +81,44 @@
     </c:forEach>
   </table>
   
-  <nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-  </ul>
-</nav>
+  
+    <ul class="pagination">
+        <c:choose>
+            <c:when test="${page == 1}">
+                <li class="page-item disabled"><span class="page-link">Previous</span></li>
+            </c:when>
+            <c:otherwise>
+                <li class="page-item"><a class="page-link" href="?page=${page - 1}">Previous</a></li>
+            </c:otherwise>
+        </c:choose>
+
+        <c:forEach begin="1" end="${totalPages}" var="pageNumber">
+            <c:choose>
+                <c:when test="${pageNumber == page}">
+                    <li class="page-item active"><span class="page-link">${pageNumber}</span></li>
+                </c:when>
+                <c:otherwise>
+                    <li class="page-item"><a class="page-link" href="?page=${pageNumber}">${pageNumber}</a></li>
+                </c:otherwise>
+            </c:choose>
+        </c:forEach>
+
+        <c:choose>
+            <c:when test="${page == totalPages}">
+                <li class="page-item disabled"><span class="page-link">Next</span></li>
+            </c:when>
+            <c:otherwise>
+                <li class="page-item"><a class="page-link" href="?page=${page + 1}">Next</a></li>
+            </c:otherwise>
+        </c:choose>
+    </ul>
+
+    <div class="mt-3">
+        <p>Page ${page} of ${totalPages}</p>
+        <p>Showing ${pageStart}-${pageEnd} of ${totalProducts} products</p>
+    </div>
+
+   
 </div>
 
  </div>

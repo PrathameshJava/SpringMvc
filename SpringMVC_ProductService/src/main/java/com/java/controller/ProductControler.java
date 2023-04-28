@@ -74,7 +74,7 @@ public class ProductControler {
 		return "editProduct";
 	}
 
-	@RequestMapping(path = "/search/{name}", method = RequestMethod.GET)
+	@RequestMapping(path = "/search", method = RequestMethod.GET)
 	public String getproduct(@PathVariable("name") String productname, Model model) {
 
 		Product product = productServices.searchProduct(productname);
