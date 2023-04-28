@@ -73,7 +73,7 @@
         <td>${product.productdescription }</td>
         <td>${product.productprice }</td>
         <td><a class="btn btn-danger" href="delete/${product.id }" ><i class="fa-solid fa-trash"></i> </a> </td>
-	    <td> <a class="btn btn-primary" href="update/${product.id }" ><i class="fa-light fa-pen-to-square"></i> </a> </td>
+	    <td><a class="btn btn-primary" href="update/${product.id }" ><i class="fa-light fa-pen-to-square"></i> </a> </td>
         
       </tr>
       
