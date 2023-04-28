@@ -37,8 +37,10 @@ li a:hover:not(.active) {
 }
 </style>
 <body>
+<h1>Welcome to spring mvc exam</h1>
+
 <ul>
-  <li><a class="active" href="login">Home</a></li>
+  <li><a class="active" href="/SpringMVC_ProductServices/">Home</a></li>
   <li><a href="list">ProductList</a></li>
   <li><a href="#contact">Contact</a></li>
 

@@ -20,7 +20,7 @@
 <title>Update Product</title>
 </head>
 <body>
-	
+	<jsp:include page="navbar.jsp"></jsp:include>
 	<h1>Update Your Product</h1>
 	<div class="container mt-5">
 
