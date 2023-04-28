@@ -1,26 +1,25 @@
 package com.java.entity;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 @Entity
 public class Product {
-/* @NotNull
-    @Size(min = 2, max = 50)*/
+
 	@Id
 	@GeneratedValue
 	private int id;
-
+	@NotBlank(message = "Name is required")
 	private String productname;
-
+	@NotBlank(message = "Description is required")
 	private String productdescription;
 
 	private float productprice;
 
-
-//	private String image;
+	private String image;
 
 	public int getId() {
 		return id;
@@ -54,13 +53,13 @@ public class Product {
 		this.productprice = productprice;
 	}
 
-//	public String getImage() {
-//		return image;
-//	}
-//
-//	public void setImage(String image) {
-//		this.image = image;
-//	}
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
 
 	public Product() {
 		super();
