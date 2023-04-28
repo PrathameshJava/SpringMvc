@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,6 +21,8 @@ import com.java.service.ProductServices;
 @Controller
 public class ProductControler {
 
+	Logger logger=Logger.getLogger(ProductControler.class);
+	
 	@Autowired
 	private ProductServices productServices;
 
@@ -75,6 +78,8 @@ public class ProductControler {
 	public String getproduct(@PathVariable("name") String productname, Model model) {
 
 		Product product = productServices.searchProduct(productname);
+		logger.info(product.toString());
+	
 		model.addAttribute("product", product);
 		return "productinfo";
 	}
