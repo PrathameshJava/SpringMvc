@@ -257,7 +257,7 @@ li a:hover:not(.active) {
 				<p class="text text-normal">New user? <span><a href="registration.jsp" class="text text-links">Create an account</a></span>
 				</p>
 			</div>
-			<form name="signin" class="form" method="get", action="secured/login">
+			<form name="signin" class="form" method="post", action="secured/login">
 				<div class="input-control">
 					<label for="email" class="input-label" hidden>Email Address</label>
 					<input type="email" name="email" id="email" class="input-field" placeholder="Email Address">

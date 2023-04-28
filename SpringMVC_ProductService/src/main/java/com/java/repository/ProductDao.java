@@ -12,9 +12,8 @@ import com.java.entity.Product;
 @Repository
 public interface ProductDao extends JpaRepository<Product, Integer> {
 
-	public Product findByName(String name);
+	public Product findByProductname(String name);
 
-   public Page<Product> findById(int id,Pageable pageable);
     
    
    

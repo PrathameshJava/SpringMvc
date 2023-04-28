@@ -1,9 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -32,17 +36,12 @@ li a:hover:not(.active) {
   background-color: #04AA6D;
 }
 </style>
-</head>
 <body>
-
 <ul>
   <li><a class="active" href="login">Home</a></li>
   <li><a href="list">ProductList</a></li>
-  <li><a href="products1">Contact</a></li>
+  <li><a href="#contact">Contact</a></li>
 
 </ul>
-<jsp:include page="login" />
 </body>
 </html>
-
-

@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Products List</title>
+  <title>Add Product</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -30,7 +30,7 @@
         <a class="nav-link" href="#">Add Products <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="list">Show all Products</a>
       </li>
       <li class="nav-item dropdown">
        
@@ -50,54 +50,49 @@
   </div>
 </nav>
 
-<div class="container">
+	
+  </div>
+	<div class="container mt-5">
 
-<form action="product" method="post"  >
+		<form action="saveproduct" method="post">
 
-         
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Product Id</th>
-        <th>Product Name</th>
-        <th>Product Description</th>
-        <th>Product Price</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    
-    <tbody>
-     <c:forEach items="${products}" var="product">
-      <tr>
-        <td> ${product.id }</td>
-        <td>${product.productname }</td>
-        <td>${product.productdescription }</td>
-        <td>${product.productprice }</td>
-        <td><a href="delete/${product.id }" ><i class="fa-solid fa-trash"></i> </a> </td>
-	    <td><a href="update/${product.id }" ><i class="fa-light fa-pen-to-square"></i> </a> </td>
-        
-      </tr>
-      
-    </tbody>
-    </c:forEach>
-  </table>
-  
-  <nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-  </ul>
-</nav>
+			<div class="mb-3">
+				<label for="product_Name">Enter Product Name</label> <input type="text"
+					class="form-control" id="productname"
+					" placeholder="Enter your Product Name" name="productname">
+
+			</div>
+
+			<div class="mb-3">
+				<label for="product_Description">Enter Product Description</label> <input type="text"
+					class="form-control" id="productdescription"
+					" placeholder="Enter your Product Description" name="productdescription">
+
+			</div>
+
+			<div class="mb-3">
+				<label for="product_Price">Enter Product Price</label> <input type="text"
+					class="form-control" id="productprice"
+					" placeholder="Enter your Product Price" name="productprice">
+
+			
 </div>
-
- </div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+	</div>
 		
-		<button type="submit" class="btn btn-primary">Add Product</button>
+		
 	</form>
 	</div>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+
+	
+
+
 </body>
 </html>
-

@@ -31,11 +31,11 @@ public class UserController {
 	@RequestMapping(path = "/product", method = RequestMethod.POST)
 	public String userProfile(@ModelAttribute Users user, Model model) {
 
-		return "add-product";
+		return "addproduct";
 
 	}
 
-	@GetMapping("/secured/login")
+	@PostMapping("/secured/login")
 	public Principal login(Principal principal) {
 		return principal;
 	}

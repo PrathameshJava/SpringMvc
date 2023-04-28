@@ -32,7 +32,7 @@ public class ProductServicesImpl implements ProductServices {
 	public List<Product> list = new ArrayList<Product>();
 
 	@Override
-	public Product addProduct(Product product)   {
+	public Product addProduct(Product product) {
 //		String path = null;
 //		String name = file.getOriginalFilename();
 //
@@ -50,7 +50,7 @@ public class ProductServicesImpl implements ProductServices {
 //		}
 //		product.setImage(fileName);
 
-		logger.info(product.getName());
+		logger.info(product.getProductname());
 		return productDao.save(product);
 	}
 
@@ -65,7 +65,7 @@ public class ProductServicesImpl implements ProductServices {
 	@Override
 	public Product searchProduct(String productname) {
 
-		return productDao.findByName(productname);
+		return productDao.findByProductname(productname);
 	}
 
 	@Override
@@ -80,18 +80,11 @@ public class ProductServicesImpl implements ProductServices {
 		return productDao.findAll();
 	}
 
-
-
 	@Override
-	public Page<Product> getAllProduct(int id, Pageable pageable) {
-		// TODO Auto-generated method stub
-		return productDao.findById(id,pageable);
-	}
+	public Product getByid(int id) throws ResourceNotFoundException {
 
-	@Override
-	public Product getByid(int id) {
-	
-		return productDao.findById(1).orElseThrow();
+		return productDao.findById(id)
+				.orElseThrow(() -> new ResourceNotFoundException("No id found for this Parameter" + id));
 	}
 
 }

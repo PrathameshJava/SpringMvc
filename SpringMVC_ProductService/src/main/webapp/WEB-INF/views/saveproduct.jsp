@@ -35,9 +35,9 @@
    
       <tr>
         <td>${product.id }</td>
-        <td>${product.name }</td>
-        <td>${product.description }</td>
-        <td>${product.price }</td>
+        <td>${product.productname }</td>
+        <td>${product.productdescription }</td>
+        <td>${product.productprice }</td>
         
       </tr>
       

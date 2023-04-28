@@ -1,10 +1,9 @@
 package com.java.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
-import com.mysql.cj.jdbc.Blob;
 
 @Entity
 public class Product {
@@ -13,13 +12,14 @@ public class Product {
 	@GeneratedValue
 	private int id;
 
-	private String name;
+	private String productname;
 
-	private String description;
+	private String productdescription;
 
-	private float price;
+	private float productprice;
 
-	private String image;
+//	@Column(columnDefinition = "MEDIUMBLOB")
+//	private String image;
 
 	public int getId() {
 		return id;
@@ -29,46 +29,37 @@ public class Product {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getProductname() {
+		return productname;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setProductname(String productname) {
+		this.productname = productname;
 	}
 
-	public String getDescription() {
-		return description;
+	public String getProductdescription() {
+		return productdescription;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setProductdescription(String productdescription) {
+		this.productdescription = productdescription;
 	}
 
-	public float getPrice() {
-		return price;
+	public float getProductprice() {
+		return productprice;
 	}
 
-	public void setPrice(float price) {
-		this.price = price;
+	public void setProductprice(float productprice) {
+		this.productprice = productprice;
 	}
 
-	public String getImage() {
-		return image;
-	}
-
-	public void setImage(String image) {
-		this.image = image;
-	}
-
-	public Product(int id, String name, String description, float price, String image) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.description = description;
-		this.price = price;
-		this.image = image;
-	}
+//	public String getImage() {
+//		return image;
+//	}
+//
+//	public void setImage(String image) {
+//		this.image = image;
+//	}
 
 	public Product() {
 		super();

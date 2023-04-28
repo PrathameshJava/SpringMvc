@@ -22,8 +22,8 @@ public interface ProductServices {
 
 	public List<Product> getAll();
 	
-	public Product getByid(int id);
+	public Product getByid(int id) throws ResourceNotFoundException;
 	
-	public Page<Product> getAllProduct(int id,Pageable pageable);
+	
 
 }
