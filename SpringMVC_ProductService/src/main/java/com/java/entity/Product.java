@@ -7,7 +7,8 @@ import javax.persistence.Id;
 
 @Entity
 public class Product {
-
+/* @NotNull
+    @Size(min = 2, max = 50)*/
 	@Id
 	@GeneratedValue
 	private int id;
@@ -18,7 +19,7 @@ public class Product {
 
 	private float productprice;
 
-//	@Column(columnDefinition = "MEDIUMBLOB")
+
 //	private String image;
 
 	public int getId() {

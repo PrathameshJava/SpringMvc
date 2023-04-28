@@ -5,17 +5,8 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
-import java.nio.file.Paths;
-import java.nio.file.Files;
-import java.io.File;
-import java.io.IOException;
 
-import org.springframework.util.StringUtils;
 import com.java.entity.Product;
 import com.java.exception.ResourceNotFoundException;
 import com.java.repository.ProductDao;
@@ -86,5 +77,6 @@ public class ProductServicesImpl implements ProductServices {
 		return productDao.findById(id)
 				.orElseThrow(() -> new ResourceNotFoundException("No id found for this Parameter" + id));
 	}
+
 
 }
