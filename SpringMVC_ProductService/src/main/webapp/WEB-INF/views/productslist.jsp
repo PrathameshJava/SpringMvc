@@ -9,11 +9,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Products List</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <title>Product List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
 </head>
 <body>
 
@@ -55,7 +54,7 @@
 <form action="product" method="post"  >
 
          
-  <table class="table">
+  <table class="table table-striped mt-3">
     <thead>
       <tr>
         <th>Product Id</th>
@@ -73,8 +72,8 @@
         <td>${product.productname }</td>
         <td>${product.productdescription }</td>
         <td>${product.productprice }</td>
-        <td><a href="delete/${product.id }" ><i class="fa-solid fa-trash"></i> </a> </td>
-	    <td><a href="update/${product.id }" ><i class="fa-light fa-pen-to-square"></i> </a> </td>
+        <td><button class="btn btn-danger" href="delete/${product.id }" ><i class="fa-solid fa-trash"></i> </a> </td>
+	    <td> <a class="btn btn-primary" href="update/${product.id }" ><i class="fa-light fa-pen-to-square"></i> </a> </td>
         
       </tr>
       
