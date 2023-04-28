@@ -3,6 +3,7 @@ package com.java.entity;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotBlank;
 
@@ -16,7 +17,7 @@ public class Product {
 	private String productname;
 	@NotBlank(message = "Description is required")
 	private String productdescription;
-
+	@NotNull(message = "Price is required")
 	private float productprice;
 
 	private String image;
