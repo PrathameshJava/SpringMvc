@@ -41,7 +41,6 @@ li a:hover:not(.active) {
   <li><a href="products1">Contact</a></li>
 
 </ul>
-<jsp:include page="login" />
 </body>
 </html>
 

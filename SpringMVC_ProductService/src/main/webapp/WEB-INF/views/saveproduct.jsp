@@ -16,7 +16,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+<jsp:include page="navbar.jsp"></jsp:include>
 <div class="container">
 <form action="product" method="post"  >
   <h2>Your Product Is Saved!!</h2>

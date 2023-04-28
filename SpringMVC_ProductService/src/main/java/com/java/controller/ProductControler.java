@@ -55,16 +55,14 @@ public class ProductControler {
 	}
 
 	@RequestMapping("/update/{id}")
-	public String updateProduct(@PathVariable("id") int product_ID, Model model, BindingResult result)
+	public String updateProduct(@PathVariable("id") int product_ID,Model model)
 			throws ResourceNotFoundException {
-		if (result.hasErrors()) {
-			return "redirect:/";
-		}
+	
 
 		Product product = productServices.updateProduct(product_ID);
 		model.addAttribute("product", product);
 
-		return "redirect/updateProduct";
+		return "updateProduct";
 	}
 
 	@RequestMapping(path = "/update/saveproduct", method = RequestMethod.POST)
